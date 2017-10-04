@@ -102,7 +102,7 @@ public class SwingApp {
     private ResourceBundle langResource;
 
     public SwingApp() {
-        //chinh Frame
+        
         fr = new JFrame();
 
         this.fr.setSize(620, 600);
@@ -141,7 +141,7 @@ public class SwingApp {
         txtDob = new JSpinner(spinModel);
         txtDob.setEditor(new JSpinner.DateEditor(txtDob, "dd/MM/yyyy"));
 
-//      Thêm vào pane2
+//      Thêm vào pane hiển thị Bảng Jtable danh sách sinh viên (pane2).
         Vector<String> clName = new Vector<>();
         Vector<Vector> vectorData = new Vector<>();
         JButton nextBtn = new JButton("Trang kế");
@@ -275,7 +275,7 @@ public class SwingApp {
         this.pane.add(pane1, "pane1");
         this.pane.add(pane2, "pane2");
 
-//        Tạo Pane 3.
+//        Tạo Pane3 (Làm chuyển đổi ngôn ngữ và chatApp - chưa xong).
         pane3 = new JPanel(null);
         p3Button = new JButton(langResource.getString("pane3Button"));
         p3TxtArea = new JTextArea();
@@ -288,7 +288,7 @@ public class SwingApp {
         pane3.add(p3Button);
         pane.add(pane3, "pane3");
         this.fr.add(pane);
-//        Tạo JMenuBar
+//        Tạo JMenuBar sử dụng resource để test chuyển ngữ
         mnBar = new JMenuBar();
         mnClock = new JMenu(langResource.getString("mnClock"));
         mnManager = new JMenu(langResource.getString("mnManager"));
